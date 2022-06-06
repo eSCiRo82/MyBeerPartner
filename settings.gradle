@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "MyBeerPartner"
+include ':app'
+include ':database'
+include ':cloud'
+include ':core:data'
+include ':common'
+include ':core:domain'
+include ':core:model'
+include ':core:viewmodel'
+include ':core:view'
+include ':common:test'

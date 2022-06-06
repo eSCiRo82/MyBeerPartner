@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:color="@color/primary" android:width="@dimen/dialog_background_border_width" />
+    <solid android:color="@color/white" />
+    <corners android:topLeftRadius="@dimen/dialog_background_border_radius"
+        android:bottomRightRadius="@dimen/dialog_background_border_radius" />
+</shape>

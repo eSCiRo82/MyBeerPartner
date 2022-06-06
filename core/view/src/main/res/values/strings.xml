@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">view</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="character_image_description">Image of the character</string>
+    <string name="selected_character_image_description">Image of the selected character</string>
+    <string name="beer_partner_character_image_description">Image of the beer partner character</string>
+
+    <string name="label_name">Name:</string>
+    <string name="label_species">Species:</string>
+    <string name="label_type">Type:</string>
+
+    <string name="downloading_resources">Downloading Rick And Morty\'s Universe…\nPlease, take a beer while waiting</string>
+
+    <string name="searching_beer_partner">Searching beer partner for %1$s…</string>
+
+    <string name="no_beer_partner_found_title">WHAT!!!</string>
+    <string name="no_beer_partner_found_message">It\'s impossible! But, I\'m sorry, there\'s no one who wants to have beers with you.</string>
+
+    <string name="where_are_you_title">EXCUSE ME, BUT…</string>
+    <string name="where_are_you_message">Where are you? It\'s impossible to arrange a meeting if we don\'t know your location.</string>
+
+    <string name="vs_str">VS</string>
+    <string name="location_beer_bout">15-round beer bout at</string>
+
+    <string name="location_fake">LOCATION</string>
+
+    <string name="description_of_the_contenders">They meet on %1$s and last saw each other on %2$s, participating in %3$d episodes.</string>
+
+    <string name="beers_out_button_text">BEERS OUT!</string>
+    <string name="filter_button">FILTER</string>
+    <string name="remove_filter_button">REMOVE</string>
+    <string name="accept_button_text">ACCEPT</string>
+    <string name="cancel_button_text">CANCEL</string>
+</resources>

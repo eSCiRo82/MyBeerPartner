@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/item_padding"
+    android:background="@drawable/item_character_background">
+
+    <ImageView
+        android:id="@+id/character_image"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/item_image_margin"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_launcher_background"
+        android:contentDescription="@string/character_image_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/character_image_barrier"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/character_image_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="character_image"
+        tools:layout_editor_absoluteX="411dp" />
+
+    <TextView
+        android:id="@+id/character_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_name"
+        android:layout_marginEnd="@dimen/item_label_margin"
+        android:layout_marginBottom="@dimen/item_label_margin"
+        style="@style/CharacterItemLabelStyle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="@id/labels_barrier"
+        app:layout_constraintStart_toStartOf="@id/character_image_barrier"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/character_species_label"/>
+
+    <TextView
+        android:id="@+id/character_name_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_name"
+        style="@style/CharacterItemValueStyle"
+        app:layout_constraintStart_toStartOf="@id/labels_barrier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/character_name_label"
+        app:layout_constraintBottom_toBottomOf="@id/character_name_label" />
+
+    <TextView
+        android:id="@+id/character_species_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_species"
+        android:layout_marginEnd="@dimen/item_label_margin"
+        android:layout_marginBottom="@dimen/item_label_margin"
+        style="@style/CharacterItemLabelStyle"
+        app:layout_constraintStart_toStartOf="@id/character_image_barrier"
+        app:layout_constraintEnd_toEndOf="@id/labels_barrier"
+        app:layout_constraintTop_toBottomOf="@id/character_name_label"
+        app:layout_constraintBottom_toTopOf="@id/character_type_label"/>
+
+    <TextView
+        android:id="@+id/character_species_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_species"
+        style="@style/CharacterItemValueStyle"
+        app:layout_constraintStart_toStartOf="@id/labels_barrier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/character_name_label"
+        app:layout_constraintBottom_toTopOf="@id/character_type_label"/>
+
+    <TextView
+        android:id="@+id/character_type_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_type"
+        android:layout_marginEnd="@dimen/item_label_margin"
+        style="@style/CharacterItemLabelStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/labels_barrier"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/character_image_barrier"
+        app:layout_constraintTop_toBottomOf="@id/character_species_label" />
+
+    <TextView
+        android:id="@+id/character_type_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_type"
+        style="@style/CharacterItemValueStyle"
+        app:layout_constraintStart_toStartOf="@id/labels_barrier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/character_species_label"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/labels_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="character_species_label,character_type_label,character_name_label"
+        tools:layout_editor_absoluteX="411dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

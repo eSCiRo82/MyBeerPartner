@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/dialog_padding"
+    android:background="@drawable/dialog_fragment_background">
+
+    <TextView
+        android:id="@+id/notification_dialog_label_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dialog_elements_margin_top"
+        style="@style/BigBoldTesxtStyle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/notification_dialog_label_message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/notification_dialog_label_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dialog_elements_margin_top"
+        style="@style/NormalTesxtStyle"
+        app:layout_constraintTop_toBottomOf="@+id/notification_dialog_label_title"
+        app:layout_constraintBottom_toTopOf="@id/cancel_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dialog_elements_margin"
+        android:layout_marginTop="@dimen/dialog_elements_margin_top"
+        android:layout_marginBottom="@dimen/dialog_elements_margin_bottom"
+        android:text="@string/cancel_button_text"
+        style="@style/ButtonTesxtStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/accept_button"
+        app:layout_constraintTop_toBottomOf="@id/notification_dialog_label_message"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/accept_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dialog_elements_margin"
+        android:layout_marginTop="@dimen/dialog_elements_margin_top"
+        android:layout_marginBottom="@dimen/dialog_elements_margin_bottom"
+        android:text="@string/accept_button_text"
+        style="@style/ButtonTesxtStyle"
+        app:layout_constraintStart_toEndOf="@id/cancel_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notification_dialog_label_message"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
